@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Lee Robinson">
+
+    <meta name="description" content="Visualization of past and present Iowa State Men's Basketball statistics.">
+    <meta name="keywords" content="iowa, state, iowa state, isu, cyclones, isu mbb, iowa state men's basketball, stats, statistics, lee robinson, leeerob">
+    <meta name="author" content="Lee Robinson">
+    <meta name="twitter:site" content="@leeerob">
+    <meta name="twitter:creator" content="@leeerob">
+
+    <title>ISU Basketball Statistics - Visualizing the past and present</title>
+
+    <!-- Charting -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/data.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.6.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/js.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+      <h1>Iowa State Basketball Statistics</h1>
+      <h4>Visualizing the past and present</p>
+    </div>
+
+    <div id="players" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div id="coaches" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div id="scorers" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+    <div class="table-responsive"> 
+      <p class="title">Highest Draft Picks</p> 
+      <p class="subtitle">Source: wikipedia.org</p>         
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Round</th>
+            <th>Pick</th>
+            <th>Name</th>
+            <th>Team</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>4</td>
+            <td>Marcus Fizer</td>
+            <td>Chicago Bulls</td>
+            <td>2000</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>5</td>
+            <td>Donald Smith</td>
+            <td>Cincinnati Royals</td>
+            <td>1968</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>13</td>
+            <td>Jeff Grayer</td>
+            <td>Milwaukee Bucks</td>
+            <td>1988</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>15</td>
+            <td>Kelvin Cato</td>
+            <td>Dallas Mavericks</td>
+            <td>1997</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>16</td>
+            <td>Royce White</td>
+            <td>Houston Rockets</td>
+            <td>2012</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>17</td>
+            <td>Victor Alexander</td>
+            <td>Golden State Warriors</td>
+            <td>1991</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>21</td>
+            <td>Craig Brackins</td>
+            <td>Oklahoma City Thunder</td>
+            <td>2010</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>24</td>
+            <td>Loren Meyer</td>
+            <td>Dallas Mavericks</td>
+            <td>1995</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>27</td>
+            <td>Jamaal Tinsley</td>
+            <td>Vancouver Grizzlies</td>
+            <td>2001</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="teams" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+    <!-- Add a Twitter Follow button -->
+    <div class="text-center pagination-centered"><a href="https://twitter.com/leeerob" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @leeerob</a></div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</body>
+
+</html>

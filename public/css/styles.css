@@ -1,0 +1,35 @@
+.jumbotron {
+    background-color: #800000;
+    background-image: url("hilton.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+    min-height: 300px;
+}
+
+h1 {
+    font-family: serif;
+    font-variant: small-caps;
+    text-rendering: optimizeLegibility;
+    text-shadow: 2px 2px 6px black;
+    padding-top: 30px;
+}
+
+h4 {
+    font-family: sans-serif;
+    text-rendering: optimizeLegibility;
+    text-shadow: 2px 2px 6px black;
+}
+
+.title {
+    color: #333333;
+    font-size: 18px;
+    text-align: center;
+    font: '13pt Verdana';
+}
+
+.subtitle {
+    color: #555555;
+    text-align: center;
+    font-size: 10pt;
+}
