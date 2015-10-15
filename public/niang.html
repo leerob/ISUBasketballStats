@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"    content="IE=edge">
+    <meta name="viewport"                 content="width=device-width, initial-scale=1">
+    <meta name="author"                   content="Lee Robinson">
+    <meta name="twitter:site"             content="@leeerob">
+    <meta name="twitter:creator"          content="@leeerob">
+    <meta name="description"              content="Visualization of past and present Iowa State Men's Basketball statistics.">
+    <meta name="keywords"                 content="iowa,state,iowa state,isu,cyclones,isu mbb,iowa state men's basketball,stats,statistics,lee robinson,leeerob">
+    <meta name="google-site-verification" content="VV3ItUb7FlDP7_2SUFct3qlSZfse9eTH6xVXoJcDEpc" />
+    <meta property="og:url"               content="http://www.isubasketballstats.com" />
+    <meta property="og:type"              content="website" />
+    <meta property="og:title"             content="ISU Basketball Stats" />
+    <meta property="og:description"       content="Visualization of past and present Iowa State Men's Basketball statistics." />
+    <meta property="og:image"             content="http://i.imgur.com/a2MdXjb.png" />
+    
+    <title>ISU Basketball Statistics - Visualizing the past and present</title>
+
+    <!-- Charting -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/data.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.6.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/progressbar.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+      <h1>Iowa State Basketball Statistics</h1>
+      <h4 id="tagline">VISUALIZING THE PAST AND PRESENT</p>
+    </div>
+
+    <div class="container">
+
+      <h2>George Niang</h2>
+      <div class="table-responsive" style="padding-top: 100px;">     
+        <table class="table table-condensed statstable">
+          <thead>
+            <th></th>
+            <th>Field Goal Percentage</th>
+            <th>Free Throw Percentage</th>
+            <th>Three Point Percentage</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-md-2">
+                <img src="css/niang.jpg" class="img-rounded img-responsive" alt="Img">
+              </td>
+              <td class="col-md-2">
+                <div id="progress"></div>
+              </td>
+              <td class="col-md-2">
+                <div id="progress2"></div>
+              </td>
+              <td class="col-md-2">
+                <div id="progress3"></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
+
+</html>

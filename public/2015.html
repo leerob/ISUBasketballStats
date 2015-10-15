@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"    content="IE=edge">
+    <meta name="viewport"                 content="width=device-width, initial-scale=1">
+    <meta name="author"                   content="Lee Robinson">
+    <meta name="twitter:site"             content="@leeerob">
+    <meta name="twitter:creator"          content="@leeerob">
+    <meta name="description"              content="Visualization of past and present Iowa State Men's Basketball statistics.">
+    <meta name="keywords"                 content="iowa,state,iowa state,isu,cyclones,isu mbb,iowa state men's basketball,stats,statistics,lee robinson,leeerob">
+    <meta name="google-site-verification" content="VV3ItUb7FlDP7_2SUFct3qlSZfse9eTH6xVXoJcDEpc" />
+    <meta property="og:url"               content="http://www.isubasketballstats.com" />
+    <meta property="og:type"              content="website" />
+    <meta property="og:title"             content="ISU Basketball Stats" />
+    <meta property="og:description"       content="Visualization of past and present Iowa State Men's Basketball statistics." />
+    <meta property="og:image"             content="http://i.imgur.com/a2MdXjb.png" />
+    
+    <title>ISU Basketball Statistics - Visualizing the past and present</title>
+
+    <!-- Charting -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/data.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.6.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/team.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/gmaps.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/progressbar.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="jumbotron" style="background-image: url(css/2015.jpg)">
+      <h1>Iowa State Basketball Statistics</h1>
+      <h4 id="tagline">VISUALIZING THE PAST AND PRESENT</p>
+    </div>
+
+    <div class="container">
+
+      <div class="table-responsive addmargin"> 
+        <p class="title">Preseason Team Awards</p> 
+        <p class="subtitle">2015-16 Season</p>         
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Ranking</th>
+              <th>Award</th>
+              <th>Publisher</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#4</td>
+              <td>Preseason Top 25</td>
+              <td>Today's U</td>
+            </tr>
+            <tr>
+              <td>#6</td>
+              <td>Preseason Top 25 (And One)</td>
+              <td>CBS</td>
+            </tr>
+            <tr>
+              <td>#7</td>
+              <td>No-Longer-Way-Too-Early Top 25</td>
+              <td>ESPN</td>
+            </tr>
+            <tr>
+              <td>#7</td>
+              <td>Preseason Top 25</td>
+              <td>Athlon Sports</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="title">Preseason Individual Awards</p> 
+      <p class="subtitle">2015-16 Season</p>  
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>Georges Niang</strong></div>
+
+        <ul class="list-group">
+          <li class="list-group-item">#8 CBS Top 100 College Basketball Players</li>
+          <li class="list-group-item">CBS Preseason Second-Team All-American</li>
+          <li class="list-group-item">Karl Malone Award Watch List</li>
+          <li class="list-group-item">Sports Illustrated Top 20 Big Man</li>
+          <li class="list-group-item">Dick Vitale's Preseason All-Solid Gold First Team</li>
+        </ul>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>Monte Morris</strong></div>
+        
+        <ul class="list-group">
+          <li class="list-group-item">#25 CBS Top 100 College Basketball Players</li>
+          <li class="list-group-item">Bob Cousy Award Watch List</li>
+        </ul>
+      </div>
+
+      <div class="panel panel-default addmargin">
+        <div class="panel-heading"><strong>Jameel McKay</strong></div>
+        
+        <ul class="list-group">
+          <li class="list-group-item">#59 CBS Top 100 College Basketball Players</li>
+          <li class="list-group-item">Sports Illustrated Top 20 Big Man</li>
+        </ul>
+      </div>
+
+      <div class="table-responsive addmargin"> 
+        <p class="title">Team Roster</p> 
+        <p class="subtitle">Source: cyclones.com</p>         
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Height</th>
+              <th>Weight</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Jameel McKay</td>
+              <td>F</td>
+              <td>6-9</td>
+              <td>225</td>
+              <td>RSr.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Abdel Nader</td>
+              <td>F</td>
+              <td>6-6</td>
+              <td>225</td>
+              <td>RSr.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Hallice Cooke</td>
+              <td>G</td>
+              <td>6-3</td>
+              <td>190</td>
+              <td>RSo.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Wes Greder</td>
+              <td>G</td>
+              <td>6-5</td>
+              <td>185</td>
+              <td>Fr.</td>
+            </tr>
+            <tr>
+              <td>00</td>
+              <td>Simeon Carter</td>
+              <td>F</td>
+              <td>6-8</td>
+              <td>215</td>
+              <td>Fr.</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Monte Morris</td>
+              <td>G</td>
+              <td>6-3</td>
+              <td>175</td>
+              <td>Jr.</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Nick Weiler-Babb</td>
+              <td>G</td>
+              <td>6-5</td>
+              <td>205</td>
+              <td>So.</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Nazareth Mitrou-Long</td>
+              <td>G</td>
+              <td>6-4</td>
+              <td>208</td>
+              <td>Sr.</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>Matt Thomas</td>
+              <td>G</td>
+              <td>6-4</td>
+              <td>197</td>
+              <td>Jr.</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>Jordan Ashton</td>
+              <td>G</td>
+              <td>6-4</td>
+              <td>195</td>
+              <td>Jr.</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>Stuart Neziek</td>
+              <td>C</td>
+              <td>6-10</td>
+              <td>245</td>
+              <td>Jr.</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>Deonte Burton</td>
+              <td>G</td>
+              <td>6-4</td>
+              <td>250</td>
+              <td>RJr.</td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td>Georges Niang</td>
+              <td>F</td>
+              <td>6-8</td>
+              <td>230</td>
+              <td>Sr.</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td>Brady Ernst</td>
+              <td>F</td>
+              <td>6-9</td>
+              <td>215</td>
+              <td>Fr.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="title">2015-16 Player's Hometowns</p> 
+      <p class="subtitle">Source: cyclones.com</p>   
+      <div id="map" class="col-md-12 graph"></div>
+
+    </div>
+
+</body>
+
+</html>

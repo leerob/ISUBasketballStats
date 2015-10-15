@@ -4,17 +4,20 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Lee Robinson">
-
-    <meta name="description" content="Visualization of past and present Iowa State Men's Basketball statistics.">
-    <meta name="keywords" content="iowa, state, iowa state, isu, cyclones, isu mbb, iowa state men's basketball, stats, statistics, lee robinson, leeerob">
-    <meta name="author" content="Lee Robinson">
-    <meta name="twitter:site" content="@leeerob">
-    <meta name="twitter:creator" content="@leeerob">
-
+    <meta http-equiv="X-UA-Compatible"    content="IE=edge">
+    <meta name="viewport"                 content="width=device-width, initial-scale=1">
+    <meta name="author"                   content="Lee Robinson">
+    <meta name="twitter:site"             content="@leeerob">
+    <meta name="twitter:creator"          content="@leeerob">
+    <meta name="description"              content="Visualization of past and present Iowa State Men's Basketball statistics.">
+    <meta name="keywords"                 content="iowa,state,iowa state,isu,cyclones,isu mbb,iowa state men's basketball,stats,statistics,lee robinson,leeerob">
+    <meta name="google-site-verification" content="VV3ItUb7FlDP7_2SUFct3qlSZfse9eTH6xVXoJcDEpc" />
+    <meta property="og:url"               content="http://www.isubasketballstats.com" />
+    <meta property="og:type"              content="website" />
+    <meta property="og:title"             content="ISU Basketball Stats" />
+    <meta property="og:description"       content="Visualization of past and present Iowa State Men's Basketball statistics." />
+    <meta property="og:image"             content="http://i.imgur.com/a2MdXjb.png" />
+    
     <title>ISU Basketball Statistics - Visualizing the past and present</title>
 
     <!-- Charting -->
@@ -24,6 +27,7 @@
     <script src="//www.parsecdn.com/js/parse-1.6.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/js.js"></script>
+    <script src="js/analytics.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -31,101 +35,145 @@
 
 <body>
 
+    <!-- Facebook Share Button -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <div class="jumbotron">
       <h1>Iowa State Basketball Statistics</h1>
-      <h4>Visualizing the past and present</p>
+      <h4 id="tagline">VISUALIZING THE PAST AND PRESENT</h4>
     </div>
 
-    <div id="players" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    <div id="coaches" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-    <div id="scorers" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div class="container">
+      <div id="players" class="graph"></div>
+      <div id="coaches" class="graph"></div>
+      <div id="scorers" class="graph"></div>
 
-    <div class="table-responsive"> 
-      <p class="title">Highest Draft Picks</p> 
-      <p class="subtitle">Source: wikipedia.org</p>         
-      <table class="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th>Round</th>
-            <th>Pick</th>
-            <th>Name</th>
-            <th>Team</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>4</td>
-            <td>Marcus Fizer</td>
-            <td>Chicago Bulls</td>
-            <td>2000</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>5</td>
-            <td>Donald Smith</td>
-            <td>Cincinnati Royals</td>
-            <td>1968</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>13</td>
-            <td>Jeff Grayer</td>
-            <td>Milwaukee Bucks</td>
-            <td>1988</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>15</td>
-            <td>Kelvin Cato</td>
-            <td>Dallas Mavericks</td>
-            <td>1997</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>16</td>
-            <td>Royce White</td>
-            <td>Houston Rockets</td>
-            <td>2012</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>17</td>
-            <td>Victor Alexander</td>
-            <td>Golden State Warriors</td>
-            <td>1991</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>21</td>
-            <td>Craig Brackins</td>
-            <td>Oklahoma City Thunder</td>
-            <td>2010</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>24</td>
-            <td>Loren Meyer</td>
-            <td>Dallas Mavericks</td>
-            <td>1995</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>27</td>
-            <td>Jamaal Tinsley</td>
-            <td>Vancouver Grizzlies</td>
-            <td>2001</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive addmargin"> 
+        <p class="title">Highest Draft Picks</p> 
+        <p class="subtitle">Source: wikipedia.org</p>         
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th id="round">Round</th>
+              <th>Pick</th>
+              <th>Name</th>
+              <th>Team</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="round">1</td>
+              <td>4</td>
+              <td>Marcus Fizer</td>
+              <td>Chicago Bulls</td>
+              <td>2000</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>5</td>
+              <td>Donald Smith</td>
+              <td>Cincinnati Royals</td>
+              <td>1968</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>13</td>
+              <td>Jeff Grayer</td>
+              <td>Milwaukee Bucks</td>
+              <td>1988</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>15</td>
+              <td>Kelvin Cato</td>
+              <td>Dallas Mavericks</td>
+              <td>1997</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>16</td>
+              <td>Royce White</td>
+              <td>Houston Rockets</td>
+              <td>2012</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>17</td>
+              <td>Victor Alexander</td>
+              <td>Golden State Warriors</td>
+              <td>1991</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>21</td>
+              <td>Craig Brackins</td>
+              <td>Oklahoma City Thunder</td>
+              <td>2010</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>24</td>
+              <td>Loren Meyer</td>
+              <td>Dallas Mavericks</td>
+              <td>1995</td>
+            </tr>
+            <tr>
+              <td id="round">1</td>
+              <td>27</td>
+              <td>Jamaal Tinsley</td>
+              <td>Vancouver Grizzlies</td>
+              <td>2001</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div id="teams" class="col-md-6 graph removemargin"></div>
+      <div id="teams_avg" class="col-md-6 graph removemargin"></div>
+      <div class="container addmargin">
+        <div class="bs-callout bs-callout-primary col-md-12">
+            <h4>Kansas Conspiracy</h4>
+            You're probably wondering how Kansas' average attendance is greater than their arena capacity. This is because <a href="http://www.kuathletics.com/sports/2013/6/27/GEN_0627134307.aspx">Allen Fieldhouse</a> utilizes bench seating, so they're able to cram more people per row than their alloted capacity. Someone should alert the Big 12 refs.
+        </div>
+      </div>
+      <div id="mostwins" class="col-md-12 graph removemargin"></div>
+      <div class="container addmargin">
+        <div class="bs-callout bs-callout-danger col-md-12">
+            <h4>Elite Eight</h4>
+            The 1999-2000 season was one for the history books. The Cyclones finished 14–2 in conference play to earn the outright Big 12 Conference regular season championship - the first since 1945 and sixth ever. The Cyclones then defeated Oklahoma 70–58 in the Big 12 Tournament finals to win the Championship, the second conference tournament title in ISU men's basketball history. The #2 seed Cyclones advanced to the Elite Eight of the 2000 NCAA Tournament after wins over #15 Central Connecticut State, #7 Auburn, and #6 UCLA, but ultimately fell to Michigan State, the eventual NCAA Champion. This was the Cyclones' deepest NCAA Tournament run in the modern era.
+        </div>
+      </div>
+      <div id="tickets" class="col-md-12 graph"></div>
+      <div id="ticketprice" class="col-md-12 graph"></div>
+      <div id="tempo" class="col-md-12 graph removemargin"></div>
+      <div class="container">
+        <div class="bs-callout bs-callout-info col-md-12">
+            <h4>Slow & Steady</h4>
+            This chart presents two key points: the slow and steady decline of the average teams' tempo, and the sluggish pace of the Greg McDermott era (2007-2010). This tempo reduction is what has prompted the NCAA to make rule changes encouraging more freedom of movement and fewer charging fouls.
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="container text-center pagination-centered">
+          <div class="fb-share-button"
+              data-href="http://www.isubasketballstats.com" 
+              data-layout="button_count">
+          </div>
+          <a class="twitter-share-button"
+             href="https://twitter.com/intent/tweet?text=ISU%20fans,%20check%20out%20this%20site!">Tweet</a>
+          <a href="https://twitter.com/leeerob" class="twitter-follow-button" data-show-count="true">Follow @leeerob</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
     </div>
-
-    <div id="teams" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-    <!-- Add a Twitter Follow button -->
-    <div class="text-center pagination-centered"><a href="https://twitter.com/leeerob" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @leeerob</a></div>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 </body>
 
