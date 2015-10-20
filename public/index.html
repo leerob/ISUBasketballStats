@@ -9,13 +9,13 @@
     <meta name="author"                   content="Lee Robinson">
     <meta name="twitter:site"             content="@leeerob">
     <meta name="twitter:creator"          content="@leeerob">
-    <meta name="description"              content="Visualization of past and present Iowa State Men's Basketball statistics.">
+    <meta name="description"              content="Visualization of past and present Iowa State men's basketball statistics.">
     <meta name="keywords"                 content="iowa,state,iowa state,isu,cyclones,isu mbb,iowa state men's basketball,stats,statistics,lee robinson,leeerob">
     <meta name="google-site-verification" content="VV3ItUb7FlDP7_2SUFct3qlSZfse9eTH6xVXoJcDEpc" />
     <meta property="og:url"               content="http://www.isubasketballstats.com" />
     <meta property="og:type"              content="website" />
     <meta property="og:title"             content="ISU Basketball Stats" />
-    <meta property="og:description"       content="Visualization of past and present Iowa State Men's Basketball statistics." />
+    <meta property="og:description"       content="Visualization of past and present Iowa State men's basketball statistics." />
     <meta property="og:image"             content="http://i.imgur.com/a2MdXjb.png" />
     
     <title>ISU Basketball Statistics - Visualizing the past and present</title>
@@ -46,14 +46,40 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="jumbotron">
-      <h1>Iowa State Basketball Statistics</h1>
+      <h1 id="name">Iowa State Basketball Statistics</h1>
       <h4 id="tagline">VISUALIZING THE PAST AND PRESENT</h4>
+
+      <div id="nav-bg" class="container-fluid">
+        <div id="nav" class="container">
+          <div class="col-xs-4">
+            <a href="index.html">HOME</a>
+          </div>
+          <div class="col-xs-4">
+            <a href="about.html">ABOUT</a>
+          </div>
+          <div class="col-xs-4">
+            <a href="2015.html">2015-16</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container">
       <div id="players" class="graph"></div>
       <div id="coaches" class="graph"></div>
-      <div id="scorers" class="graph"></div>
+      <div id="scorers" class="graph removemargin"></div>
+      <div class="container addmargin">
+        <div class="bs-callout bs-callout-primary col-md-12">
+            <h4>The Mayor</h4>
+            A list of all-time greats isn't complete without Ames' own Mayor, Fred Hoiberg. You'll find him top ten in three different cateogories: points, steals, and assists. Clicking each of the respective links will change the data shown in the chart.
+            <ul class="categoryList">
+              <li><a id="points">Points</a></li>
+              <li><a id="steals">Steals</a></li>
+              <li><a id="assists">Assists</a></li>
+              <li><a id="blocks">Blocks</a></li>
+            </ul>
+        </div>
+      </div>
 
       <div class="table-responsive addmargin"> 
         <p class="title">Highest Draft Picks</p> 
@@ -155,7 +181,7 @@
       <div id="tickets" class="col-md-12 graph"></div>
       <div id="ticketprice" class="col-md-12 graph"></div>
       <div id="tempo" class="col-md-12 graph removemargin"></div>
-      <div class="container">
+      <div class="container addmargin">
         <div class="bs-callout bs-callout-info col-md-12">
             <h4>Slow & Steady</h4>
             This chart presents two key points: the slow and steady decline of the average teams' tempo, and the sluggish pace of the Greg McDermott era (2007-2010). This tempo reduction is what has prompted the NCAA to make rule changes encouraging more freedom of movement and fewer charging fouls.
@@ -169,8 +195,8 @@
               data-layout="button_count">
           </div>
           <a class="twitter-share-button"
-             href="https://twitter.com/intent/tweet?text=ISU%20fans,%20check%20out%20this%20site!">Tweet</a>
-          <a href="https://twitter.com/leeerob" class="twitter-follow-button" data-show-count="true">Follow @leeerob</a>
+             href="https://twitter.com/intent/tweet?text=ISU%20fans,%20check%20out%20this%20site!"
+             data-counturl="http://www.isubasketballstats.com">Tweet</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </div>
     </div>

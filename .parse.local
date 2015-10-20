@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "ISUBasketballStats": {
+      "applicationId": "cipDgUTYARcdxNeT8sD5ZE76QxNWOURlKLzfruak"
+    },
+    "_default": {
+      "link": "ISUBasketballStats"
+    }
+  }
+}

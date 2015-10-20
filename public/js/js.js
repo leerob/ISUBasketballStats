@@ -9,6 +9,11 @@ $(function () {
         },
         credits: {
             enabled: false
+        },
+        plotOptions: {
+            series: {
+                animation: false
+            }
         }
     });
 
@@ -55,8 +60,28 @@ $(function () {
             "Menze", "Sutherland", "Strannigan", "Anderson", "John", "Trickey",
             "Nance", "Orr", "Floyd", "Eustachy", "Morgan", "McDermott", "Hoiberg"];
 
-    data = [.408, .344, .415, .333, .556, .312, .520, .414, .600, .469,
-            .551, .245, .407, 0.522, 0.633, 0.631, 0.585, 0.465, 0.676];
+
+    var coaches = [];
+    coaches.push({y: .408, years: "1908-11"});
+    coaches.push({y: .344, years: "1912-15"});
+    coaches.push({y: .415, years: "1916-19"});
+    coaches.push({y: .333, years: "1920"});
+    coaches.push({y: .556, years: "1921"});
+    coaches.push({y: .312, years: "1922-28"});
+    coaches.push({y: .520, years: "1929-47"});
+    coaches.push({y: .414, years: "1948-54"});
+    coaches.push({y: .600, years: "1955-59"});
+    coaches.push({y: .469, years: "1960-71"});
+    coaches.push({y: .551, years: "1972-74"});
+    coaches.push({y: .245, years: "1975-76"});
+    coaches.push({y: .407, years: "1977-80"});
+    coaches.push({y: .522, years: "1981-94"});
+    coaches.push({y: .633, years: "1995-98"});
+    coaches.push({y: .631, years: "1999-03"});
+    coaches.push({y: .585, years: "2004-06"});
+    coaches.push({y: .465, years: "2007-10"});
+    coaches.push({y: .676, years: "2011-15"});
+
 
     var plotLine = {
                     value: 0.5,
@@ -69,7 +94,7 @@ $(function () {
 
     createLineChart("#coaches", "Winning Percentage of Head Coaches",
                     "Source: wikipedia.org", "Winning Percentage (%)",
-                    "Winning Percentage", cats, data, plotLine);
+                    "Winning Percentage", cats, coaches, plotLine);
 
 
     var scorers = [];
@@ -87,6 +112,87 @@ $(function () {
     
     createBarChart("#scorers", "column", "All-Time Cyclone Scoring Leaders",
                     "Source: cyclones.com", "Points", "Points", "", '{point.y}', scorers);
+
+
+    var chart = $('#scorers').highcharts();
+    $('#assists').click(function() {
+        var assists = [];
+        assists.push({name: "Jeff Hornacek", y: 665});
+        assists.push({name: "Diante Garrett", y: 611});
+        assists.push({name: "Gary Thompkins", y: 600});
+        assists.push({name: "Jacy Holloway", y: 592});
+        assists.push({name: "Terry Woods", y: 564});
+        assists.push({name: "Will Blalock", y: 464});
+        assists.push({name: "Curtis Stinson", y: 448});
+        assists.push({name: "Jamaal Tinsley", y: 431});
+        assists.push({name: "Justus Thigpen", y: 371});
+        assists.push({name: "Fred Hoiberg", y: 350});
+        chart.series[0].setData(assists)
+        chart.yAxis[0].axisTitle.attr({
+            text: 'Assists'
+        });
+        chart.setTitle({text: "All-Time Cyclone Assist Leaders"});
+    });
+    
+    $('#points').click(function() {
+        var scorers = [];
+        scorers.push({name: "Jeff Grayer", y: 2502});
+        scorers.push({name: "Barry Stevens", y: 2190});
+        scorers.push({name: "Fred Hoiberg", y: 1993});
+        scorers.push({name: "Victor Alexander", y: 1892});
+        scorers.push({name: "Marcus Fizer", y: 1830});
+        scorers.push({name: "Julius Michalik", y: 1825});
+        scorers.push({name: "Jake Sullivan", y: 1810});
+        scorers.push({name: "Hercle Ivy", y: 1752});
+        scorers.push({name: "Justus Thigpen", y: 1724});
+        scorers.push({name: "Zaid Abdul-Aziz", y: 1672});
+        chart.series[0].setData(scorers)
+        chart.yAxis[0].axisTitle.attr({
+            text: 'Points'
+        });
+        chart.setTitle({text: "All-Time Cyclone Scoring Leaders"});
+    });
+
+    $('#steals').click(function() {
+        var steals = [];
+        steals.push({name: "Jeff Hornacek", y: 211});
+        steals.push({name: "Justus Thigpen", y: 210});
+        steals.push({name: "Fred Hoiberg", y: 207});
+        steals.push({name: "Curtis Stinson", y: 200});
+        steals.push({name: "Jeff Grayer", y: 199});
+        steals.push({name: "Will Blalock", y: 177});
+        steals.push({name: "Jamaal Tinsley", y: 177});
+        steals.push({name: "Ron Harris", y: 169});
+        steals.push({name: "Diante Garrett", y: 153});
+        steals.push({name: "Terry Woods", y: 146});
+
+        chart.series[0].setData(steals)
+        chart.yAxis[0].axisTitle.attr({
+            text: 'Steals'
+        });
+        chart.setTitle({text: "All-Time Cyclone Steals Leaders"});
+    });
+
+    $('#blocks').click(function() {
+        var blocks = [];
+        blocks.push({name: "Jared Homan", y: 235});
+        blocks.push({name: "Kelvin Cato", y: 189});
+        blocks.push({name: "Loren Meyer", y: 134});
+        blocks.push({name: "Victor Alexander", y: 120});
+        blocks.push({name: "Sam Hill", y: 115});
+        blocks.push({name: "Rahshon Clark", y: 109});
+        blocks.push({name: "Craig Brackins", y: 99});
+        blocks.push({name: "Marcus Fizer", y: 89});
+        blocks.push({name: "Julius Michalik", y: 82});
+        blocks.push({name: "Jamie Vanderbeken", y: 78});
+
+        chart.series[0].setData(blocks)
+        chart.yAxis[0].axisTitle.attr({
+            text: 'Blocks'
+        });
+        chart.setTitle({text: "All-Time Cyclone Blocks Leaders"});
+    });
+
 
     var teams = [];
     teams.push({name: "Texas", y: 16734, color: '#999999'});
@@ -151,16 +257,16 @@ $(function () {
 
 
     var teams = [];
-    teams.push({name: "Duke", y: 381.36});
-    teams.push({name: "Kentucky", y: 279.78});
-    teams.push({name: "Kansas", y: 233.98});
-    teams.push({name: "Pittsburgh", y: 133.84});
-    teams.push({name: "UCLA", y: 129.39});
-    teams.push({name: "UNC", y: 125.29});
-    teams.push({name: "West Virginia", y: 123.01});
-    teams.push({name: "Iowa State", y: 101.20});
-    teams.push({name: "Louisville", y: 97.87});
-    teams.push({name: "St. John's", y: 95.64});
+    teams.push({name: "Duke", y: 381.36, color: '#999999'});
+    teams.push({name: "Kentucky", y: 279.78, color: '#999999'});
+    teams.push({name: "Kansas", y: 233.98, color: '#999999'});
+    teams.push({name: "Pittsburgh", y: 133.84, color: '#999999'});
+    teams.push({name: "UCLA", y: 129.39, color: '#999999'});
+    teams.push({name: "UNC", y: 125.29, color: '#999999'});
+    teams.push({name: "West Virginia", y: 123.01, color: '#999999'});
+    teams.push({name: "Iowa State", y: 101.20, color: '#B20000'});
+    teams.push({name: "Louisville", y: 97.87, color: '#999999'});
+    teams.push({name: "St. John's", y: 95.64, color: '#999999'});
 
 
     createBarChart("#ticketprice", "bar", "Highest Average Ticket Prices Nationally (Secondary Market)",
@@ -341,7 +447,15 @@ function createLineChart(div, title, subtitle, yaxis, series, cats, data, line) 
             plotLines: [line]
         },
         tooltip: {
-            valueSuffix: '%'
+            shared: true,
+            useHTML: true,
+            headerFormat: '<small>{point.key}</small><table>',
+            pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' +
+                '<td style="text-align: right"><b>{point.y}%</b></td></tr>' + 
+                '<tr><td style="color: {series.color}">Years Coached: </td>' +
+                '<td style="text-align: right"><b>{point.years}</b></td></tr>',
+            footerFormat: '</table>',
+            valueDecimals: 3
         },
         series: [{
             name: series,          

@@ -6,7 +6,25 @@
     background-size: cover;
     text-align: center;
     color: white;
-    min-height: 300px;
+    height: 300px;
+}
+
+#nav-bg {
+    margin-top: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#nav {
+    width: 500px;
+    height: 34px;
+    padding-top: 8px;
+}
+
+#nav a {
+    color: white;
+    letter-spacing: 2px;
+    font-family: Century Gothic, sans-serif;
+    text-shadow: 2px 2px 6px black;
 }
 
 h1 {
@@ -23,16 +41,6 @@ h1 {
     text-shadow: 2px 2px 6px black;
 }
 
-@media only screen and (max-width: 480px) {
-    #tagline {
-        font-size: 10pt;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    #round { display:none; visibility:hidden; }
-}
-
 .title {
     color: #333333;
     font-size: 18px;
@@ -47,6 +55,10 @@ h1 {
     text-align: center;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
     padding-bottom: 10px;
+}
+
+#about {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
 }
 
 #progress, #progress2, #progress3 {
@@ -75,6 +87,11 @@ h1 {
     height: 400px;
     margin: 0 auto;
     margin-bottom: 50px;
+}
+
+.categoryList {
+    padding-top: 10px;
+    margin-bottom: 0;
 }
 
 .addmargin {
@@ -107,6 +124,15 @@ h1 {
 
 .bs-callout+.bs-callout {
     margin-top: -5px;
+}
+
+@media only screen and (min-width: 992px) {
+    .bs-callout+.bs-callout {
+        margin-top: 0px;
+    }
+    .bs-callout {
+        margin: 0;
+    }
 }
 
 .bs-callout-default {
@@ -313,4 +339,65 @@ h1 {
 
 .fb-share-button.fb_iframe_widget span {
   vertical-align: top !important;
+}
+
+@media only screen and (max-width: 867px) {
+    #name {
+        font-size: 36pt;
+    }
+
+    #nav-bg {
+        margin-top: 87px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #name {
+        margin-top: 38px;
+    }
+}
+
+@media only screen and (max-width: 672px) {
+    #name {
+        font-size: 30pt;
+    }
+
+    #nav-bg {
+        margin-top: 95px;
+    }
+}
+
+@media only screen and (max-width: 557px) {
+    #tagline {
+        font-size: 10pt;
+    }
+
+    #nav-bg {
+        margin-top: 56px;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    #name {
+        font-size: 25pt;
+    }
+
+    #nav-bg {
+        margin-top: 72px;
+    }
+
+    #nav a {
+        font-size: 8pt;
+        letter-spacing: 1px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #tagline {
+        font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #round { display:none; visibility:hidden; }
 }

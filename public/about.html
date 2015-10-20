@@ -18,17 +18,11 @@
     <meta property="og:description"       content="Visualization of past and present Iowa State men's basketball statistics." />
     <meta property="og:image"             content="http://i.imgur.com/a2MdXjb.png" />
     
-    <title>ISU Basketball Statistics - Visualizing the past and present</title>
+    <title>About - ISU Basketball Statistics</title>
 
-    <!-- Charting -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="http://code.highcharts.com/modules/data.js"></script>
-    <script src="//www.parsecdn.com/js/parse-1.6.5.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="js/player.js"></script>
     <script src="js/analytics.js"></script>
-    <script src="js/progressbar.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -55,35 +49,34 @@
       </div>
     </div>
 
-    <div class="container">
+    <div id="about" class="container">
+      <h2><strong>About</strong></h2>
+      <p>ISU Basketball Stats was created with one simple goal in mind: visualize basketball data into charts and graphs.</p>
+      <p>Most of the data is retrieved from:</p>
+      <ul>
+        <li><a href="http://espn.go.com/mens-college-basketball/team/_/id/66/iowa-state-cyclones">ESPN</a></li>
+        <li><a href="http://www.cyclones.com/SportSelect.dbml?SPID=4252">Cyclones</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Iowa_State_Cyclones_men%27s_basketball">Wikipedia</a></li>
+        <li><a href="http://www.big12sports.com/SportSelect.dbml?DB_OEM_ID=10410&SPID=13134&SPSID=106112">Big 12</a></li>
+      </ul>
 
-      <h2>George Niang</h2>
-      <div class="table-responsive" style="padding-top: 100px;">     
-        <table class="table table-condensed statstable">
-          <thead>
-            <th></th>
-            <th>Field Goal Percentage</th>
-            <th>Free Throw Percentage</th>
-            <th>Three Point Percentage</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-md-2">
-                <img src="css/niang.jpg" class="img-rounded img-responsive" alt="Img">
-              </td>
-              <td class="col-md-2">
-                <div id="progress"></div>
-              </td>
-              <td class="col-md-2">
-                <div id="progress2"></div>
-              </td>
-              <td class="col-md-2">
-                <div id="progress3"></div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <p>Other references:</p>
+      <ul>
+        <li><a href="http://kenpom.com">Kenpom</a></li>
+        <li><a href="http://bbstate.com">Basketball State</a></li>
+        <li><a href="http://sports.usatoday.com/ncaa/finances/">USA Today</a></li>
+        <li><a href="http://www.forbes.com/sites/jesselawrence/2014/11/19/duke-and-kentucky-lead-top-25-most-expensive-college-basketball-tickets-on-secondary-market/">Forbes</a></li>
+        <li><a href="http://cyclonefanatic.com/encyclonepedia/stats.php/">Cyclone Fanatic</a></li>
+        <li><a href="http://hoop-math.com/IowaSt.2015.php">Hoop Math</a></li>
+        <li><a href="http://www.sports-reference.com/cbb/schools/iowa-state/">Sports Reference</a></li>
+      </ul>
+
+      <p>Website created by: <a href="http://www.leejamesrobinson.com">Lee Robinson</a></p>
+      <a href="https://twitter.com/leeerob" class="twitter-follow-button" data-show-count="true">Follow @leeerob</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+    </div>
+
 </body>
 
 </html>

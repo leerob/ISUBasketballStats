@@ -9,16 +9,16 @@
     <meta name="author"                   content="Lee Robinson">
     <meta name="twitter:site"             content="@leeerob">
     <meta name="twitter:creator"          content="@leeerob">
-    <meta name="description"              content="Visualization of past and present Iowa State Men's Basketball statistics.">
+    <meta name="description"              content="Visualization of past and present Iowa State men's basketball statistics.">
     <meta name="keywords"                 content="iowa,state,iowa state,isu,cyclones,isu mbb,iowa state men's basketball,stats,statistics,lee robinson,leeerob">
     <meta name="google-site-verification" content="VV3ItUb7FlDP7_2SUFct3qlSZfse9eTH6xVXoJcDEpc" />
     <meta property="og:url"               content="http://www.isubasketballstats.com" />
     <meta property="og:type"              content="website" />
     <meta property="og:title"             content="ISU Basketball Stats" />
-    <meta property="og:description"       content="Visualization of past and present Iowa State Men's Basketball statistics." />
+    <meta property="og:description"       content="Visualization of past and present Iowa State men's basketball statistics." />
     <meta property="og:image"             content="http://i.imgur.com/a2MdXjb.png" />
     
-    <title>ISU Basketball Statistics - Visualizing the past and present</title>
+    <title>2015-16 - ISU Basketball Statistics</title>
 
     <!-- Charting -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -38,80 +38,71 @@
 
 <body>
 
-    <div class="jumbotron" style="background-image: url(css/2015.jpg)">
-      <h1>Iowa State Basketball Statistics</h1>
-      <h4 id="tagline">VISUALIZING THE PAST AND PRESENT</p>
+    <div class="jumbotron">
+      <h1 id="name">Iowa State Basketball Statistics</h1>
+      <h4 id="tagline">VISUALIZING THE PAST AND PRESENT</h4>
+
+      <div id="nav-bg" class="container-fluid">
+        <div id="nav" class="container">
+          <div class="col-xs-4">
+            <a href="index.html">HOME</a>
+          </div>
+          <div class="col-xs-4">
+            <a href="about.html">ABOUT</a>
+          </div>
+          <div class="col-xs-4">
+            <a href="2015.html">2015-16</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container">
 
-      <div class="table-responsive addmargin"> 
-        <p class="title">Preseason Team Awards</p> 
-        <p class="subtitle">2015-16 Season</p>         
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Ranking</th>
-              <th>Award</th>
-              <th>Publisher</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>#4</td>
-              <td>Preseason Top 25</td>
-              <td>Today's U</td>
-            </tr>
-            <tr>
-              <td>#6</td>
-              <td>Preseason Top 25 (And One)</td>
-              <td>CBS</td>
-            </tr>
-            <tr>
-              <td>#7</td>
-              <td>No-Longer-Way-Too-Early Top 25</td>
-              <td>ESPN</td>
-            </tr>
-            <tr>
-              <td>#7</td>
-              <td>Preseason Top 25</td>
-              <td>Athlon Sports</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div id="rankings" class="graph"></div>
+
 
       <p class="title">Preseason Individual Awards</p> 
       <p class="subtitle">2015-16 Season</p>  
 
-      <div class="panel panel-default">
-        <div class="panel-heading"><strong>Georges Niang</strong></div>
-
-        <ul class="list-group">
-          <li class="list-group-item">#8 CBS Top 100 College Basketball Players</li>
-          <li class="list-group-item">CBS Preseason Second-Team All-American</li>
-          <li class="list-group-item">Karl Malone Award Watch List</li>
-          <li class="list-group-item">Sports Illustrated Top 20 Big Man</li>
-          <li class="list-group-item">Dick Vitale's Preseason All-Solid Gold First Team</li>
-        </ul>
+      <div class="container addmargin">
+        <div class="bs-callout bs-callout-primary col-md-4">
+            <h4>Georges Niang</h4>
+            <ul>
+              <li><strong>#8</strong> CBS Top 100 College Basketball Players</li>
+              <li>Sports Illustrated Top 20 Big Man</li>
+              <li>CBS Second-Team All-American</li>
+              <li>Karl Malone Award Watch List</li>
+              <li>Sports Illustrated Top 20 Big Man</li>
+              <li>Dick Vitale's All-Solid Gold First Team</li>
+            </ul>
+        </div>
+        <div class="bs-callout bs-callout-danger col-md-4">
+            <h4>Monte Morris</h4>
+            <ul>
+              <li><strong>#25</strong> CBS Top 100 College Basketball Players</li>
+              <li>Bob Cousy Award Watch List</li>
+            </ul>
+        </div>
+        <div class="bs-callout bs-callout-info col-md-4">
+            <h4>Jameel McKay</h4>
+            <ul>
+              <li><strong>#59</strong> CBS Top 100 College Basketball Players</li>
+              <li>Kareem Abdul-Jabbar Award Watch List</li>
+              <li>Sports Illustrated Top 20 Big Man</li>
+            </ul>
+        </div>
       </div>
 
-      <div class="panel panel-default">
-        <div class="panel-heading"><strong>Monte Morris</strong></div>
-        
-        <ul class="list-group">
-          <li class="list-group-item">#25 CBS Top 100 College Basketball Players</li>
-          <li class="list-group-item">Bob Cousy Award Watch List</li>
-        </ul>
-      </div>
-
-      <div class="panel panel-default addmargin">
-        <div class="panel-heading"><strong>Jameel McKay</strong></div>
-        
-        <ul class="list-group">
-          <li class="list-group-item">#59 CBS Top 100 College Basketball Players</li>
-          <li class="list-group-item">Sports Illustrated Top 20 Big Man</li>
-        </ul>
+      <div class="container">
+        <div class="col-md-6">
+          <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Big12MBB?src=hash">#Big12MBB</a>: For the 14th time in <a href="https://twitter.com/hashtag/Big12?src=hash">#Big12</a> history, <a href="https://twitter.com/KUHoops">@KUHoops</a> tops the coaches preseason poll - <a href="http://t.co/AzX7MD9u6X">http://t.co/AzX7MD9u6X</a> <a href="http://t.co/v8622HP5uG">pic.twitter.com/v8622HP5uG</a></p>&mdash; Big 12 Conference (@Big12Conference) <a href="https://twitter.com/Big12Conference/status/654665596525613058">October 15, 2015</a></blockquote>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Three Cyclones. Three Watch Lists. <a href="http://t.co/NFa4vn2SWV">pic.twitter.com/NFa4vn2SWV</a></p>&mdash; Cyclone Basketball (@CycloneMBB) <a href="https://twitter.com/CycloneMBB/status/655070964280004609">October 16, 2015</a></blockquote>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       </div>
 
       <div class="table-responsive addmargin"> 
